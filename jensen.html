@@ -1,0 +1,697 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jensen Ryan T. Lim | Autobiography</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #1e293b;
+    background: #f8fafc;
+}
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0f172a;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px 50px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.profile {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 26px;
+    font-weight: normal;
+    color: #bfdbfe;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 750px;
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 28px;
+    background: white;
+    color: #1d4ed8;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* GENERAL */
+section {
+    padding: 90px 8%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 45px;
+    color: #0f172a;
+}
+
+/* INTRODUCTION */
+.introduction {
+    background: white;
+}
+
+.intro-text {
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+    font-size: 17px;
+}
+
+.intro-text p {
+    margin-bottom: 20px;
+}
+
+/* PROFILE */
+.profile-section {
+    background: #eef2ff;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.card h3 {
+    color: #1d4ed8;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+/* JOURNEY */
+.journey {
+    background: white;
+}
+
+.timeline {
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline-item {
+    background: #f8fafc;
+    border-left: 5px solid #2563eb;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 0 12px 12px 0;
+}
+
+.timeline-item h3 {
+    color: #1d4ed8;
+    margin-bottom: 8px;
+}
+
+/* EDUCATION */
+.education {
+    background: #eef2ff;
+}
+
+.education-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+
+.education-card h3 {
+    color: #1d4ed8;
+}
+
+/* CAREER */
+.career {
+    background: white;
+}
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.career-card {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 4px solid #2563eb;
+}
+
+.career-card h3 {
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+/* ADVOCACY */
+.advocacy {
+    background: #eef2ff;
+}
+
+.advocacy-text {
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+}
+
+.advocacy-text p {
+    margin-bottom: 20px;
+}
+
+/* VALUES */
+.values {
+    background: white;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value {
+    text-align: center;
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.value h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+/* FUTURE */
+.future {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+.future .section-title {
+    color: white;
+}
+
+.future-content {
+    max-width: 850px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* QUOTE */
+.quote {
+    background: #1d4ed8;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.quote p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 27px;
+    font-style: italic;
+}
+
+/* FOOTER */
+footer {
+    background: #020617;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 30px;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .profile-grid,
+    .career-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+
+    <div class="logo">
+        JENSEN RYAN T. LIM
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#values">Values</a></li>
+        <li><a href="#future">Future</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <!-- Replace profile.jpg with your photo -->
+        <img src="profile.jpg"
+             alt="Jensen Ryan T. Lim"
+             class="profile">
+
+        <h1>Jensen Ryan T. Lim</h1>
+
+        <h2>Educator • ICT Advocate • Educational Leader</h2>
+
+        <p>
+            An educator's journey is not measured only by years of service,
+            but by the lives touched, knowledge shared, challenges overcome,
+            and opportunities created for learners.
+        </p>
+
+        <a href="#about" class="btn">
+            Discover My Story
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="introduction" id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My Autobiography
+        </h2>
+
+        <div class="intro-text">
+
+            <p>
+                My name is <strong>Jensen Ryan T. Lim</strong>. I am an
+                educator whose professional journey has been shaped by my
+                passion for teaching, technology, continuous learning,
+                and service to learners and fellow educators.
+            </p>
+
+            <p>
+                My journey in education has allowed me to experience
+                different dimensions of teaching and learning. From
+                information and communications technology to
+                technical-vocational education, I have continuously
+                explored ways to make education relevant to the needs
+                of learners and the changing demands of society.
+            </p>
+
+            <p>
+                I currently serve as a <strong>Master Teacher I</strong>
+                at <strong>Lopez National Comprehensive High School</strong>,
+                where I am involved in the Senior High School Department.
+                My responsibilities have allowed me to work not only as
+                a classroom teacher but also as a coordinator, subject
+                group leader, trainer, and learning facilitator.
+            </p>
+
+            <p>
+                As an educator, I believe that teaching is more than
+                delivering lessons. It is about understanding learners,
+                developing their skills, encouraging discipline,
+                providing meaningful learning experiences, and preparing
+                them for life beyond the classroom.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PERSONAL PROFILE -->
+<section class="profile-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Personal & Professional Profile
+        </h2>
+
+        <div class="profile-grid">
+
+            <div class="card">
+
+                <h3>Who I Am</h3>
+
+                <p>
+                    <strong>Name:</strong> Jensen Ryan T. Lim
+                </p>
+
+                <p>
+                    <strong>Profession:</strong> Educator
+                </p>
+
+                <p>
+                    <strong>Current Position:</strong> Master Teacher I
+                </p>
+
+                <p>
+                    <strong>Institution:</strong>
+                    Lopez National Comprehensive High School
+                </p>
+
+                <p>
+                    <strong>Area:</strong>
+                    Senior High School – TVL/ICT
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Professional Interests</h3>
+
+                <p>
+                    My professional interests include educational
+                    technology, information and communications technology,
+                    technical-vocational education, innovation,
+                    educational leadership, and community development.
+                </p>
+
+                <p>
+                    I am particularly interested in finding meaningful
+                    ways to integrate technology into teaching and learning
+                    while ensuring that learners develop practical skills
+                    that can be applied in real-world situations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- JOURNEY -->
+<section class="journey" id="journey">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My Professional Journey
+        </h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>Discovering My Passion for Technology</h3>
+
+                <p>
+                    My professional interests developed around technology
+                    and information and communications technology. I became
+                    interested in how computers, networking, digital tools,
+                    and emerging technologies could solve problems and
+                    create opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Entering the Teaching Profession</h3>
+
+                <p>
+                    My journey as an educator gave me the opportunity to
+                    transform my technical knowledge into meaningful
+                    learning experiences. Teaching allowed me to share
+                    knowledge while continuously learning from my students.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Growing as a Senior High School Teacher</h3>
+
+                <p>
+                    In Senior High School, I became particularly involved
+                    in Technical-Vocational-Livelihood education and ICT.
+                    I have worked with learners in areas related to
+                    computer systems servicing, digital technologies,
+                    productivity applications, and other technology-based
+                    competencies.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Taking Leadership Responsibilities</h3>
+
+                <p>
+                    As my career developed, I took on additional
+                    responsibilities in school leadership and coordination.
+                    These experiences strengthened my skills in planning,
+                    organizing programs, coordinating teachers, facilitating
+                    professional learning, and supporting school improvement.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Becoming a Lifelong Learner</h3>
+
+                <p>
+                    I pursued advanced studies because I believe that
+                    educators should never stop learning. Graduate studies,
+                    professional development programs, training, research,
+                    and collaboration with other educators have contributed
+                    greatly to my continuing growth.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section class="education" id="education">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My Educational Journey
+        </h2>
+
+
+        <div class="education-card">
+
+            <h3>
+                Doctor of Philosophy in Educational Management
+            </h3>
+
+            <p>
+                Major in Educational Leadership
+            </p>
+
+            <p>
+                My doctoral studies deepened my understanding of
+                educational leadership, school practices, organizational
+                development, innovation, and the role of educational
+                leaders in improving learning institutions.
+            </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>
+                Master in Educational Management
+            </h3>
+
+            <p>
+                My master's degree strengthened my foundation in
+                educational management, leadership, instructional
+                supervision, and school administration.
+            </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>
+                Continuous Professional Development
+            </h3>
+
+            <p>
+                Beyond formal degrees, I continue to participate in
+                professional development activities involving ICT,
+                technical-vocational education, educational technology,
+                curriculum implementation, assessment, and teacher
+                development.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CAREER -->
+<section class="career" id="career">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My Career and Contributions
+        </h2>
+
+        <div class="career-grid">
+
+            <div class="career-card">
+
+                <h3>Teaching</h3>
+
+                <p>
+                    I teach learners in the Senior High School environment,
+                    particularly in the Technical-Vocational-Liv
